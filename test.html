@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>压缩图片</title>
+</head>
+<body>
+<p id="load" style="display: none;color: red;">请等待...</p>
+<label for="imgFile">图片上传：</label>
+<input id='imgFile' type="file" onchange="previewFile()">
+<label for="minSize">最小图片尺寸 单位:k (1k-50M):</label>
+<input type="number" id="minSize" min="1" max="51200" value="10">
+<label for="maxSize">最大图片尺寸 单位:k (1k-50M):</label>
+<input type="number" id="maxSize" min="1" max="51200" value="100">
+<img src="" alt="" class="img">
+<script src="./index.js"></script>
+<script>
+    function previewFile() {
+        let fileObj = document.getElementById("imgFile").files[0];
+        let qkImage = new QKImage(fileObj);
+        let minSize=document.getElementById('minSize').value;
+        let maxSize=document.getElementById('maxSize').value;
+        document.getElementById('load').style.display='block';
+        qkImage.setSize(parseInt(minSize),parseInt(maxSize)).setCount(70).start(function (base64Src,tf) {
+            document.getElementById('load').style.display='none';
+            // console.log(tf);
+            if (!tf){
+                alert('失败，以下图片，请下载到本地，再次上传并修改');
+            }
+            document.querySelector('.img').setAttribute('src',base64Src);
+        })
+    }
+</script>
+</body>
+</html>

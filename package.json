@@ -1,0 +1,27 @@
+{
+  "name": "qk-image",
+  "version": "1.0.0",
+  "description": "更简单方便的前端图片操作",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QuKin/qk-image.git"
+  },
+  "keywords": [
+    "image",
+    "size",
+    "file",
+    "quality",
+    "javascript",
+    "js"
+  ],
+  "author": "QuKin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/QuKin/qk-image/issues"
+  },
+  "homepage": "https://github.com/QuKin/qk-image#readme"
+}
