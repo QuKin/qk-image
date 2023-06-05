@@ -1,6 +1,6 @@
 {
   "name": "qk-image",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "更简单方便的前端图片操作",
   "main": "index.js",
   "scripts": {
