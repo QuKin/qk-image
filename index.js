@@ -1,7 +1,7 @@
 /**
  * @name          QKImage
  * @description   更简单方便的前端图片操作
- * @version       1.0.0
+ * @version       1.0.1
  * @author        QuKin <13606184008@163.com>
  * @Date          2023-6-4 19:31:16
  */
@@ -235,7 +235,6 @@ class QKImage {
      * @explain 借助canvas对图片进行重绘（canvas2DataURL）
      * @param {string} base64Url base64格式的图片字符串
      * @param {startCallback} callback 该函数执行完毕后，要执行的回调函数
-     * @returns
      */
     photoCompress(base64Url, callback) {
         let _this = this;
